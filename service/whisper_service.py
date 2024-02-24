@@ -20,17 +20,18 @@ class WhisperRequest(BaseModel):
 class WhisperTransribeService:
     def __init__(self, model_name: str):
         # self.device = "cuda:0" if torch.cuda.is_available() else "cpu"
-        model_paths = {
-            "base": "./whisper_models/base.pt",
-            "large-v3": "./whisper_models/large-v3.pt",
-            "medium": "./whisper_models/medium.pt",
-            "small": "./whisper_models/small.pt",
-            "tiny": "./whisper_models/tiny.pt",
-        }
-        if model_name in model_paths:
-            self.model_path = model_paths[model_name]
-        else:
-            raise Exception(f"Model {model_name} does not exist")
+        self.model_path = model_name
+        # model_paths = {
+        #     "base": "./whisper_models/base.pt",
+        #     "large-v3": "./whisper_models/large-v3.pt",
+        #     "medium": "./whisper_models/medium.pt",
+        #     "small": "./whisper_models/small.pt",
+        #     "tiny": "./whisper_models/tiny.pt",
+        # }
+        # if model_name in model_paths:
+        #     self.model_path = model_paths[model_name]
+        # else:
+        #     raise Exception(f"Model {model_name} does not exist")
 
     def transcribe(self, file_location: str, pre_prompts: str) -> str:
         # model = whisper.load_model(self.model_path, device=self.device)
