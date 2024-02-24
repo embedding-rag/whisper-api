@@ -1,0 +1,8 @@
+openai-whisper==20231117
+fastapi==0.109.2
+pydantic==2.6.2
+requests==2.31.0
+uvicorn==0.27.1
+python-ffmpeg==2.0.10
+torch==2.2.1
+# transformers==4.38.1
