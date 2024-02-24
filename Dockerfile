@@ -19,12 +19,12 @@ RUN pip install -r requirements.txt
 RUN echo "Python packages installed"
 
 # download files to whisper_models directory
-RUN mkdir whisper_models
-RUN wget -O whisper_models/base.pt https://jf-open-prod-1301446188.cos.ap-guangzhou.myqcloud.com/media/P/24/0223/models/whispermodels/base.pt
-RUN wget -O whisper_models/tiny.pt https://jf-open-prod-1301446188.cos.ap-guangzhou.myqcloud.com/media/P/24/0223/models/whispermodels/tiny.pt
-RUN wget -O whisper_models/small.pt https://jf-open-prod-1301446188.cos.ap-guangzhou.myqcloud.com/media/P/24/0223/models/whispermodels/small.pt
-RUN wget -O whisper_models/medium.pt https://jf-open-prod-1301446188.cos.ap-guangzhou.myqcloud.com/media/P/24/0223/models/whispermodels/medium.pt
-RUN wget -O whisper_models/large-v3.pt https://jf-open-prod-1301446188.cos.ap-guangzhou.myqcloud.com/media/P/24/0223/models/whispermodels/large-v3.pt
+# RUN mkdir whisper_models
+# RUN wget -O whisper_models/base.pt https://jf-open-prod-1301446188.cos.ap-guangzhou.myqcloud.com/media/P/24/0223/models/whispermodels/base.pt
+# RUN wget -O whisper_models/tiny.pt https://jf-open-prod-1301446188.cos.ap-guangzhou.myqcloud.com/media/P/24/0223/models/whispermodels/tiny.pt
+# RUN wget -O whisper_models/small.pt https://jf-open-prod-1301446188.cos.ap-guangzhou.myqcloud.com/media/P/24/0223/models/whispermodels/small.pt
+# RUN wget -O whisper_models/medium.pt https://jf-open-prod-1301446188.cos.ap-guangzhou.myqcloud.com/media/P/24/0223/models/whispermodels/medium.pt
+# RUN wget -O whisper_models/large-v3.pt https://jf-open-prod-1301446188.cos.ap-guangzhou.myqcloud.com/media/P/24/0223/models/whispermodels/large-v3.pt
 
 # Expose the port that the web service will be running on
 WORKDIR /app
